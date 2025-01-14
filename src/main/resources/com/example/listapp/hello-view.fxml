@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
@@ -15,9 +16,37 @@
             <Font name="Apple Braille" size="19.0" />
          </font>
       </Label>
-      <ListView editable="true" layoutX="239.0" layoutY="107.0" prefHeight="375.0" prefWidth="591.0" />
-      <TextArea layoutX="22.0" layoutY="107.0" prefHeight="270.0" prefWidth="200.0" text="What Can You Do? &#10;&#10;The purpose of this app is for you to manage your grades  and keep track of them. You will be able to input a few things into this list. You can input the Course name, the teacher, and the grade you have for this course. Then you will be able to input a grade goal that you have for the class, and once you acheive that goal you will be able to cross out the class. Now Good Luck on managing your grades!" wrapText="true" />
-      <Hyperlink layoutX="588.0" layoutY="516.0" text="Email Your Teacher For Extension!" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="22.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true" />
+      <ListView editable="true" layoutX="239.0" layoutY="50.0" prefHeight="375.0" prefWidth="591.0" />
+      <TextArea editable="false" layoutX="24.0" layoutY="84.0" prefHeight="209.0" prefWidth="200.0" text="What Can You Do? &#10;&#10;The purpose of this app is for you to manage your grades  and keep track of them. By inputting information into the boxes below you will be able to keep track of your grade. Once you acheive your grade goal the row will cross off to show you. Now Good Luck on managing your grades!" wrapText="true" />
+      <Hyperlink layoutX="596.0" layoutY="496.0" text="Email Your Teacher For Extension!" />
+      <TextField layoutX="43.0" layoutY="350.0" />
+      <TextField layoutX="43.0" layoutY="413.0" />
+      <TextField layoutX="43.0" layoutY="482.0" />
+      <TextField layoutX="43.0" layoutY="554.0" />
+      <Label alignment="CENTER" layoutX="55.0" layoutY="448.0" prefHeight="26.0" prefWidth="137.0" text="Current Grade" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="63.0" layoutY="515.0" prefHeight="26.0" prefWidth="121.0" text="Grade Goal" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="55.0" layoutY="381.0" prefHeight="26.0" prefWidth="137.0" text="Teacher" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="55.0" layoutY="324.0" prefHeight="26.0" prefWidth="137.0" text="Course" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER" layoutX="324.0" layoutY="477.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="160.0" text="Click to adjust the list" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
    </children>
 </Pane>

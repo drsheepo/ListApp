@@ -11,39 +11,39 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="608.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label alignment="CENTER" layoutX="239.0" layoutY="14.0" prefHeight="36.0" prefWidth="357.0" text="Welcome To The Grade Manager App!" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="Introduction" alignment="CENTER" layoutX="239.0" layoutY="14.0" prefHeight="36.0" prefWidth="357.0" text="Welcome To The Grade Manager App!" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Apple Braille" size="19.0" />
          </font>
       </Label>
-      <ListView editable="true" layoutX="239.0" layoutY="50.0" prefHeight="375.0" prefWidth="591.0" />
-      <TextArea editable="false" layoutX="24.0" layoutY="84.0" prefHeight="209.0" prefWidth="200.0" text="What Can You Do? &#10;&#10;The purpose of this app is for you to manage your grades  and keep track of them. By inputting information into the boxes below you will be able to keep track of your grade. Once you acheive your grade goal the row will cross off to show you. Now Good Luck on managing your grades!" wrapText="true" />
-      <Hyperlink layoutX="596.0" layoutY="496.0" text="Email Your Teacher For Extension!" />
-      <TextField layoutX="43.0" layoutY="350.0" />
-      <TextField layoutX="43.0" layoutY="413.0" />
-      <TextField layoutX="43.0" layoutY="482.0" />
-      <TextField layoutX="43.0" layoutY="554.0" />
-      <Label alignment="CENTER" layoutX="55.0" layoutY="448.0" prefHeight="26.0" prefWidth="137.0" text="Current Grade" textAlignment="CENTER" wrapText="true">
+      <ListView fx:id="ListView" editable="true" layoutX="239.0" layoutY="50.0" prefHeight="375.0" prefWidth="591.0" />
+      <TextArea fx:id="Explanation" editable="false" layoutX="24.0" layoutY="84.0" prefHeight="209.0" prefWidth="200.0" text="What Can You Do? &#10;&#10;The purpose of this app is for you to manage your grades  and keep track of them. By inputting information into the boxes below you will be able to keep track of your grade. Once you acheive your grade goal the row will cross off to show you. Now Good Luck on managing your grades!" wrapText="true" />
+      <Hyperlink fx:id="EmailLink" layoutX="596.0" layoutY="496.0" onAction="#GoEmail" text="Email Your Teacher For Extension!" />
+      <TextField fx:id="CourseInput" layoutX="43.0" layoutY="350.0" onAction="#ChangeCourse" />
+      <TextField fx:id="TeacherInput" layoutX="43.0" layoutY="413.0" onAction="#ChangeTeacher" />
+      <TextField fx:id="GradeInput" layoutX="43.0" layoutY="482.0" onAction="#ChangeGrade" />
+      <TextField fx:id="GoalInput" layoutX="43.0" layoutY="554.0" onAction="#ChangeGoal" />
+      <Label fx:id="Grade" alignment="CENTER" layoutX="55.0" layoutY="448.0" prefHeight="26.0" prefWidth="137.0" text="Current Grade" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="63.0" layoutY="515.0" prefHeight="26.0" prefWidth="121.0" text="Grade Goal" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="Goal" alignment="CENTER" layoutX="63.0" layoutY="515.0" prefHeight="26.0" prefWidth="121.0" text="Grade Goal" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="55.0" layoutY="381.0" prefHeight="26.0" prefWidth="137.0" text="Teacher" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="Teacher" alignment="CENTER" layoutX="55.0" layoutY="381.0" prefHeight="26.0" prefWidth="137.0" text="Teacher" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="55.0" layoutY="324.0" prefHeight="26.0" prefWidth="137.0" text="Course" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="Course" alignment="CENTER" layoutX="55.0" layoutY="324.0" prefHeight="26.0" prefWidth="137.0" text="Course" textAlignment="CENTER" wrapText="true">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Button alignment="CENTER" layoutX="324.0" layoutY="477.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="160.0" text="Click to adjust the list" textAlignment="CENTER" wrapText="true">
+      <Button fx:id="ListUpdate" alignment="CENTER" layoutX="324.0" layoutY="477.0" mnemonicParsing="false" onAction="#AdjustList" prefHeight="61.0" prefWidth="160.0" text="Click to adjust the list" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>

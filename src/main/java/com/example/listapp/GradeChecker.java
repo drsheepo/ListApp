@@ -6,6 +6,16 @@ public class GradeChecker {
     Float grade;
     Float gradegoal;
 
+    public boolean isCompleted() {
+        return completed;
+    }
+
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
+    }
+
+    boolean completed;
+
     public GradeChecker(String course, String teacher, Float grade, Float gradegoal) {
         this.course = course;
         this.teacher = teacher;
@@ -45,4 +55,13 @@ public class GradeChecker {
         this.gradegoal = gradegoal;
     }
 
+    @Override
+    public String toString() {
+        if (completed) {
+            return " Congrats!! You have acheived your grade goal for" + getCourse() + " . " ;
+
+        } else {
+            return " This class is " + getCourse() + " and your teacher is " + getTeacher() + ". Your current grade is " + getGrade() + " and your goal is to get a " + getGradegoal() + ".";
+        }
+    }
 }

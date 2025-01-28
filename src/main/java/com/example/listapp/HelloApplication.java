@@ -16,6 +16,10 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.show();
     }
+    public void stop() throws Exception {
+
+        GradeChecker.saveData();
+    }
 
     public static void main(String[] args) {
         launch();

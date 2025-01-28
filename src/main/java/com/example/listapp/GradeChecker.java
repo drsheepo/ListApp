@@ -1,10 +1,23 @@
 package com.example.listapp;
 
-public class GradeChecker {
+import java.io.*;
+import java.util.ArrayList;
+
+public class GradeChecker implements Serializable {
     String course;
     String teacher;
     Float grade;
     Float gradegoal;
+
+    public static ArrayList<GradeChecker> getAllData() {
+        return allData;
+    }
+
+    public static void setAllData(ArrayList<GradeChecker> allData) {
+        GradeChecker.allData = allData;
+    }
+
+    static ArrayList<GradeChecker> allData = new ArrayList<GradeChecker>();
 
     public boolean isCompleted() {
         return completed;
@@ -21,6 +34,7 @@ public class GradeChecker {
         this.teacher = teacher;
         this.grade = grade;
         this.gradegoal = gradegoal;
+        allData.add(this);
     }
 
     public String getCourse() {
@@ -58,10 +72,27 @@ public class GradeChecker {
     @Override
     public String toString() {
         if (completed) {
-            return " Congrats!! You have acheived your grade goal for" + getCourse() + " . " ;
+            return " Congrats!! You have acheived your grade goal for " + getCourse() + " . " ;
 
         } else {
-            return " This class is " + getCourse() + " and your teacher is " + getTeacher() + ". Your current grade is " + getGrade() + " and your goal is to get a " + getGradegoal() + ".";
+            return " This class is " + getCourse() + " and your teacher is " + getTeacher() + ". Your current grade is " + getGrade() + " and your goal is to get a " + getGradegoal() + " . ";
         }
+
     }
+    static void saveData() throws Exception {
+        FileOutputStream fileOut = new FileOutputStream("PcSave");
+        ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
+        objectOut.writeObject(GradeChecker.allData);
+        objectOut.close();
+        fileOut.close();
+
+    }
+    static void restoreData() throws Exception {
+        FileInputStream fileIn = new FileInputStream("PcSave");
+        ObjectInputStream objectIn = new ObjectInputStream(fileIn);
+        GradeChecker.allData = (ArrayList<GradeChecker>) objectIn.readObject();
+        objectIn.close();
+        fileIn.close();
+    }
+
 }

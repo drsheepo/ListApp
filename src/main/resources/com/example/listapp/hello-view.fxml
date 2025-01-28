@@ -41,11 +41,21 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Button fx:id="ListUpdate" alignment="CENTER" layoutX="324.0" layoutY="477.0" mnemonicParsing="false" onAction="#AdjustList" prefHeight="61.0" prefWidth="160.0" text="Click to adjust the list" textAlignment="CENTER" wrapText="true">
+      <Button fx:id="ListUpdate" alignment="CENTER" layoutX="322.0" layoutY="511.0" mnemonicParsing="false" onAction="#AdjustList" prefHeight="61.0" prefWidth="160.0" text="Click to adjust the list" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="System Bold Italic" size="13.0" />
          </font>
       </Button>
-      <TextField fx:id="CongratsMessage" layoutX="568.0" layoutY="481.0" onAction="#DoCongrats" prefHeight="53.0" prefWidth="200.0" />
+      <TextField fx:id="NotesBox" layoutX="568.0" layoutY="481.0" prefHeight="115.0" prefWidth="200.0" />
+      <Label fx:id="Notes" alignment="CENTER" layoutX="615.0" layoutY="438.0" prefHeight="36.0" prefWidth="106.0" text="Notes" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="NewCourse" alignment="CENTER" layoutX="322.0" layoutY="431.0" mnemonicParsing="false" onAction="#AddNewCourse" prefHeight="61.0" prefWidth="160.0" text="Click to add new Course" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Button>
    </children>
 </Pane>

@@ -132,6 +132,7 @@ public class HelloController {
             } else {
                 selectedChecker.setCompleted(false);
 
+            listView.refresh();
             }
         }
 //GradeInput.getText().equalsIgnoreCase(GoalInput.getText()))

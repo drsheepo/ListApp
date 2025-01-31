@@ -125,14 +125,16 @@ public class HelloController {
             System.out.println("1: " + GradeInput.getText());
             System.out.println("2: " + GoalInput.getText());
 
-            if (GradeInput.getText().equalsIgnoreCase(GoalInput.getText())) {
+            float gradeNum = Float.parseFloat(GradeInput.getText());
+            float goalNum = Float.parseFloat(GoalInput.getText());
+            if (gradeNum >= goalNum) {
                 selectedChecker.setCompleted(true);
             } else {
                 selectedChecker.setCompleted(false);
 
             }
         }
-
+//GradeInput.getText().equalsIgnoreCase(GoalInput.getText()))
     }
 
 }
